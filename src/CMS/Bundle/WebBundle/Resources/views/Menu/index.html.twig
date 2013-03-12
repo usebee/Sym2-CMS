@@ -4,12 +4,14 @@
       <div class="navbar-inner">
         <div class="container">
           <ul class="nav">
-            <li class="active"><a href="http://twitter.github.com/bootstrap/examples/justified-nav.html#">Home</a></li>
-            <li><a href="http://twitter.github.com/bootstrap/examples/justified-nav.html#">Projects</a></li>
-            <li><a href="http://twitter.github.com/bootstrap/examples/justified-nav.html#">Services</a></li>
-            <li><a href="http://twitter.github.com/bootstrap/examples/justified-nav.html#">Downloads</a></li>
-            <li><a href="http://twitter.github.com/bootstrap/examples/justified-nav.html#">About</a></li>
-            <li><a href="http://twitter.github.com/bootstrap/examples/justified-nav.html#">Contact</a></li>
+            {% for key, value in menus %}
+                {% if active == key %}
+                    <li class="active">
+                {% else %}
+                    <li>
+                {% endif %}
+                    <a href="{{ key }}">{{ value }}</a></li>                        
+            {% endfor %}
           </ul>
         </div>
       </div>

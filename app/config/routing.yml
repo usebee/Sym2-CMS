@@ -1,7 +1,3 @@
-cms_web:
-    resource: "@CMSWebBundle/Resources/config/routing.yml"
-    prefix:   /
-
 cms_acl:
     resource: "@CMSAclBundle/Resources/config/routing.yml"
     prefix:   /
@@ -13,6 +9,10 @@ cms_admin:
 #cms_front:
 #    resource: "@CMSFrontBundle/Resources/config/routing.yml"
 #    prefix:   /
+
+cms_web:
+    resource: "@CMSWebBundle/Resources/config/routing.yml"
+    prefix:   /
 
 cms_admin_user:
     resource: "@CMSAdminBundle/Resources/config/routing/user.yml"
